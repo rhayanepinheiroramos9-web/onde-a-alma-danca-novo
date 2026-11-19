@@ -1,2 +1,2 @@
 # onde-a-alma-danca-novo
-Site sobre a história, a arte e a essência do ballet.
+Um espaço dedicado à arte do ballet, sua história, seus movimentos e sua capacidade de transformar sentimentos em expressão.
