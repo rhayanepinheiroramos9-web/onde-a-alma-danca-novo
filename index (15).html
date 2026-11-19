@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onde a Alma Dança</title>
+    <style>
+   
+body {
+    background-color: #17151B;
+    color: #FFFFFF;
+    font-family: Georgia, serif;
+    margin: 0;
+}
+
+header {
+    background-color: #76518F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+header h1 {
+    font-size: 42px;
+}
+
+header p {
+    font-size: 18px;
+}
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 25px;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #17151B;
+    border-radius: 15px;
+}
+
+main h2 {
+    color: #76518F;
+    border-bottom: 2px solid #76518F;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+main p {
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #76518F;
+}
+
+article img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+article div {
+    flex: 1;
+}
+
+article h2 {
+    display: inline-block;
+}
+
+.artigo-autor {
+    font-weight: bold;
+    color: #76518F;
+}
+
+button {
+    background-color: #76518F;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    article {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    article img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+</style>
+</head>
+<body>
+
+    <header>
+        <h1>Onde a Alma Dança</h1>
+        <p>Porque existem sentimentos que só a dança consegue expressar.</p>
+    </header>
+
+    <main>
+
+    <article>
+        <img src="bailarina.jpg"
+        alt="Bailarinas em uma apresentação de ballet">
+
+        <div>
+            <h2>Bem-vindo ao universo da dança!</h2>
+
+            <p class="artigo-autor">Por: Onde a Alma Dança</p>
+
+            <p>Um espaço onde a dança ganha vida, os movimentos contam histórias e a arte se transforma em expressão.</p>
+
+            <button>💜 <span>0</span></button>
+            <button>👏 <span>0</span></button>
+        </div>
+    </article>
+
+    <article>
+        <div>
+            <h2>A história do ballet</h2>
+
+            <p class="artigo-autor">Por: Onde a Alma Dança</p>
+
+            <p>O ballet surgiu nas cortes italianas durante o Renascimento e se desenvolveu na França, onde ganhou características que conhecemos até hoje. Ao longo dos séculos, tornou-se uma das formas mais conhecidas de dança clássica, unindo técnica, música, disciplina e expressão artística.</p>
+
+            <button>💜 <span>0</span></button>
+            <button>👏 <span>0</span></button>
+        </div>
+    </article>
+
+    <article>
+        <div>
+            <h2>O universo da dança</h2>
+
+            <p class="artigo-autor">Por: Onde a Alma Dança</p>
+
+            <p>Além do ballet clássico, existem diversos estilos que exploram diferentes formas de expressão. A dança contemporânea mistura movimentos e emoções; o jazz combina ritmo e energia; e a dança lírica une a técnica à sensibilidade da música. Cada estilo possui sua própria identidade e maneira de contar histórias.</p>
+
+            <button>💜 <span>0</span></button>
+            <button>👏 <span>0</span></button>
+        </div>
+    </article>
+
+    <article>
+        <div>
+            <h2>Onde a alma encontra a dança</h2>
+
+            <p class="artigo-autor">Por: Onde a Alma Dança</p>
+
+            <p>Mais do que movimentos, a dança é sentimento, dedicação e liberdade. É transformar emoções em arte e encontrar, em cada passo, uma forma única de expressar a própria essência.</p>
+
+            <button>💜 <span>0</span></button>
+            <button>👏 <span>0</span></button>
+        </div>
+    </article>
+
+<article>
+    <div>
+        <img src="bailarina.jpg"
+        alt="Bailarina em uma apresentação de ballet">
+        <img src="bailarina2.jpg" alt="Bailarina com vestido lilás">
+
+        <p class="artigo-autor">Um espaço de inspiração</p>
+
+        <h2>A dança vai além dos passos</h2>
+
+        <p>
+            Dançar é descobrir novas formas de sentir,
+            expressar emoções e transformar movimentos
+            em histórias. Cada apresentação representa
+            dedicação, esforço e amor pela arte.
+        </p>
+
+        <button>💜 <span>0</span></button>
+        <button>👏 <span>0</span></button>
+    </div>
+</article>
+
+
+</main>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(botao => {
+        let curtiu = false;
+
+        botao.addEventListener("click", () => {
+            const contador = botao.querySelector("span");
+
+            let quantidade = Number(contador.textContent);
+
+            if (curtiu) {
+                quantidade--;
+                curtiu = false;
+            } else {
+                quantidade++;
+                curtiu = true;
+            }
+
+            contador.textContent = quantidade;
+        });
+    });
+</script>
+
+</body>
+</html>
